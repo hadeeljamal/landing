@@ -1,0 +1,885 @@
+
+
+html {
+  direction: rtl;
+    scroll-behavior: smooth;
+}
+body {
+  direction: rtl;
+    overflow-x: hidden;
+}
+
+/* ==========================================================
+! 3. Header Section
+========================================================== */
+header.main-header {
+  padding: 28px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+header.main-header.header-scrolled {
+    position: fixed;
+    background: #fff;
+    padding: 15px 0;
+    transition: all 0.5s;    box-shadow: 0px 2px 10px 0px rgba(198, 198, 198, 0.6);
+
+}
+
+header.main-header.header-scrolled .logo img {
+    max-width: 100px !important;
+  transition: all .5s ease-in-out;
+}
+header.main-header .innerWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header.main-header .innerWrap .logo {
+  width: 135px;
+}
+header.main-header .innerWrap .logo a {
+  display: block;
+  width: 100%;
+}
+header.main-header .innerWrap .logo a img {
+  max-width: 100%;
+}
+header.main-header .innerWrap nav {
+  position: relative;
+  margin-left: 40px;
+}
+header.main-header .innerWrap nav .nav-items {
+  list-style: none;
+  margin-bottom: 0;
+}
+header.main-header .innerWrap nav .nav-items > li {
+  position: relative;
+  color:#1775bb;
+  font-size: 18px;
+  display: inline-block;
+  padding: 14px 10px;
+  border-radius: 26px;margin:10px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;position: relative;right: 170px
+}
+header.main-header .innerWrap nav .nav-items > li a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+header.main-header .innerWrap nav .nav-items > li:last-child {
+  margin-left: 0;
+}
+header.main-header .innerWrap nav .nav-items > li.active a {
+    color: #1775bb;
+}
+header.main-header .innerWrap nav .nav-items > li.active a::before {
+content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1775bb;
+    visibility: visible;
+    transition: all 0.3s ease-in-out 0s;
+}
+header.main-header .innerWrap nav .nav-items > li a::before {
+content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1775bb;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
+header.main-header .innerWrap nav .nav-items > li:hover a::before {
+        visibility: visible;
+    width: 100%;
+
+}
+header.main-header .innerWrap .navButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header.main-header .innerWrap .buy-tickets {
+    padding: 0 !important;
+    color: #fff !important;
+}
+header.main-header .innerWrap .buy-tickets:hover a::before {
+    display: none;
+}
+header.main-header .innerWrap .buy-tickets:hover a{
+    background-color: transparent;
+}
+header.main-header .innerWrap .buy-tickets a{
+    color: #fff;
+    background: #4d9d42;
+    padding: 0px 22px;
+    border-radius: 50px;
+    border: 2px solid #4d9d42;
+    transition: all ease-in-out 0.3s;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-top: 2px;
+    line-height: 1;
+    font-size: 13px;
+    
+}
+header.main-header .innerWrap .navButtons .toggle-nav {
+  padding: 0 48px 0 15px;
+    display: none;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .toggle-btn {
+  background: none;
+  border: none;
+  outline: 0;
+  position: relative;
+  z-index: 2222222;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .toggle-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .toggle-btn.active span:nth-child(2) {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .toggle-btn.active span:nth-child(1) {
+  -webkit-transform: rotateY(180deg) rotateZ(45deg) translate(12px, 5px);
+          transform: rotateY(180deg) rotateZ(45deg) translate(12px, 5px);
+}
+header.main-header .innerWrap .navButtons .toggle-nav .toggle-btn.active span:nth-child(3) {
+  -webkit-transform: rotateY(-180deg) rotateZ(-45deg) translate(6px, 0px);
+          transform: rotateY(-180deg) rotateZ(-45deg) translate(6px, 0px);
+}
+header.main-header .innerWrap .navButtons .toggle-nav .toggle-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 100%;
+  color: #fff;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  z-index: 9999;
+  opacity: 0;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .mobile-menu .mobile-menu-items {
+  background-color: #ffffff;
+  margin: 0;
+  width: 270px;
+  height: 100%;
+  overflow: auto;
+  list-style: none;
+  padding: 0;
+    text-align: right;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .mobile-menu-items li {
+  padding: 30px 23px;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f1f1;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .mobile-menu-items li:last-child {
+  border-bottom: 0;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .mobile-menu-items li a {
+  color: #1775bb;
+  text-decoration: none;
+}
+header.main-header .toggle-nav .mobile-menu-items .buy-tickets {
+    padding: 40px 0 !important;
+}
+header.main-header .toggle-nav .mobile-menu-items .buy-tickets a{
+    color: #fff !important;
+}
+header.main-header .innerWrap .navButtons .toggle-nav .mobile-menu.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background-color: rgba(6, 12, 34, 0.98);
+  opacity: 1;
+  -webkit-transition: all .7s ease-in-out 0s;
+  transition: all .7s ease-in-out 0s;
+}
+/*
+@media (max-width: 520px) {
+  header.main-header .innerWrap {
+    display: block;
+  }
+
+}
+*/
+@media (max-width: 1200px) {
+  header.main-header nav {
+    display: none;
+  }
+    header.main-header .innerWrap .navButtons .toggle-nav {
+        display: block;
+    }
+    header.main-header .innerWrap {
+        justify-content: space-between;
+    }
+    
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+  height: 90px;
+  padding: 25px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header.header-scrolled,
+#header.header-fixed {
+  background: rgba(6, 12, 34, 0.98);
+  height: 70px;
+  padding: 15px 0;
+  transition: all 0.5s;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 span {
+  color: #f82249;
+}
+
+#header #logo h1 a,
+#header #logo h1 a:hover {
+  color: #fff;
+}
+
+#header #logo img {
+ 
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Nav Menu Essentials */
+
+.nav-menu,
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  right: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;position: relative;top:30px;right:40px
+}
+
+.nav-menu > li {
+  float: right;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  right: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+
+#nav-menu-container {
+  float: right;
+  margin: 0;
+}
+
+/* Nav Meu Styling */
+
+.nav-menu a {
+  padding: 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(202, 206, 221, 0.8);
+  font-weight: 600;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu .menu-active a,
+.nav-menu a:hover {
+  color: #fff;
+}
+
+.nav-menu > li {
+  margin-left: 8px;
+}
+
+.nav-menu > li > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4d9d42;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before,
+.nav-menu li:hover > a:before,
+.nav-menu .menu-active > a:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav-menu li.buy-tickets a {
+  color: #fff;
+  background: #4d9d42;
+  padding: 7px 22px;
+  border-radius: 50px;
+  border: 2px solid #4d9d42;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-top: 2px;
+  line-height: 1;
+  font-size: 13px;
+}
+
+.nav-menu li.buy-tickets a:hover {
+  background: none;
+}
+
+.nav-menu li.buy-tickets:hover a:before,
+.nav-menu li.buy-tickets.menu-active a:before {
+  visibility: hidden;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 0;
+  padding: 10px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #fff;
+  border-radius: 3px;
+}
+
+.nav-menu ul li {
+  transition: 0.3s;
+}
+
+.nav-menu ul li a {
+  padding: 10px;
+  color: #060c22;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+  border-radius: 3px;
+}
+
+.nav-menu ul li:hover > a {
+  background: #4d9d42;
+  color: #fff;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 15px 15px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+/* Mobile Nav Styling */
+
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(6, 12, 34, 0.9);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #4d9d42;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #4d9d42;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #4d9d42;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(6, 12, 34, 0.8);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+
+
+/*--------------------------------------------------------------
+# F.A.Q Section
+--------------------------------------------------------------*/
+
+#faq {
+  padding: 60px 0;
+}
+
+#faq #faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+#faq #faq-list li {
+  border-bottom: 1px solid #ddd;
+}
+
+#faq #faq-list a {
+  padding: 18px 0;
+  display: block;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+#faq #faq-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+
+#faq #faq-list p {
+  margin-bottom: 20px;
+}
+
+#faq #faq-list a.collapse {
+  color: #4d9d42;
+}
+
+#faq #faq-list a.collapsed {
+  color: #000;
+}
+
+#faq #faq-list a.collapsed i::before {
+  content: "\f055" !important;
+}
+
+/*--------------------------------------------------------------
+# Subscribe Section
+--------------------------------------------------------------*/
+
+#subscribe {
+  padding: 60px;
+  background: url(../img/subscribe-bg.jpg) center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#subscribe:before {
+  content: "";
+  background: rgba(6, 12, 34, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#subscribe .section-header h2,
+#subscribe p {
+  color: #fff;
+}
+
+#subscribe input {
+  background: #fff;
+  color: #060c22;
+  border: 0;
+  outline: none;
+  margin: 0;
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+#subscribe button {
+  border: 0;
+  padding: 9px 25px;
+  cursor: pointer;
+  background: #4d9d42;
+  color: #fff;
+  transition: all 0.3s ease;
+  outline: none;
+  font-size: 14px;
+  border-radius: 50px;
+}
+
+#subscribe button:hover {
+  background: #e0072f;
+}
+
+/*--------------------------------------------------------------
+# Buy Tickets Section
+--------------------------------------------------------------*/
+
+#buy-tickets {
+  padding: 60px 0;
+}
+
+#buy-tickets .card {
+  border: none;
+  border-radius: 5px;
+  transition: all  0.3s ease-in-out;
+  box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+}
+
+#buy-tickets .card:hover {
+  box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
+}
+
+#buy-tickets .card hr {
+  margin: 25px 0;
+}
+
+#buy-tickets .card .card-title {
+  margin: 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#buy-tickets .card .card-price {
+  font-size: 48px;
+  margin: 0;
+}
+
+#buy-tickets .card ul li {
+  margin-bottom: 20px;
+}
+
+#buy-tickets .card .text-muted {
+  opacity: 0.7;
+}
+
+#buy-tickets .card .btn {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: all 0.2s;
+  background-color: #4d9d42;
+  border: 0;
+  color: #fff;
+}
+
+#buy-tickets .card .btn:hover {
+  background-color: #e0072f;
+}
+
+#buy-tickets #buy-ticket-modal input,
+#buy-tickets #buy-ticket-modal select {
+  border-radius: 0;
+}
+
+#buy-tickets #buy-ticket-modal .btn {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: all 0.2s;
+  background-color: #4d9d42;
+  border: 0;
+  color: #fff;
+}
+
+#buy-tickets #buy-ticket-modal .btn:hover {
+  background-color: #e0072f;
+}
+
+
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 767px) {
+  #subscribe input {
+    min-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact .contact-address,
+  #contact .contact-phone,
+  #contact .contact-email {
+    padding: 20px 0;
+  }
+
+  #contact .contact-phone {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}
+
+@media (min-width: 991px) {
+  #schedule .sub-heading {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #intro {
+    background-attachment: fixed;
+  }
+
+  #about {
+    background-attachment: fixed;
+  }
+
+  #subscribe {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 1199px) {
+  #header .container {
+    max-width: 100%;
+  }
+
+  .nav-menu a {
+    padding: 8px 4px;
+  }
+}
+
+@media (max-width: 991px) {
+  #header {
+    background: rgba(6, 12, 34, 0.98);
+    height: 70px;
+    padding: 15px 0;
+    transition: all 0.5s;
+  }
+
+  #nav-menu-container {
+    display: none;
+  }
+
+  #mobile-nav-toggle {
+    display: inline;
+  }
+
+  #intro .intro-container {
+    top: 70px;
+  }
+
+  #intro h1 {
+    font-size: 34px;
+  }
+
+  #intro p {
+    font-size: 16px;
+  }
+
+  #schedule .nav-tabs a {
+    padding: 8px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+
+  #faq #faq-list a {
+    font-size: 18px;
+  }
+
+  #faq #faq-list i {
+    top: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  #schedule .nav-tabs a {
+    padding: 8px 50px;
+  }
+}
+
+@media (max-width: 574px) {
+  #venue .venue-info h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #schedule .nav-tabs a {
+    padding: 8px 30px;
+  }
+}
+
+@media (max-width: 460px) {
+  #subscribe button {
+    margin-top: 10px;
+  }
+}
